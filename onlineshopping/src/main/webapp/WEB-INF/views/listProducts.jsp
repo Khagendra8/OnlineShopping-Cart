@@ -25,7 +25,7 @@
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
-							<li class="active">All Products</li>
+							<li class="active">/All Products</li>
 
 
 						</ol>
@@ -38,8 +38,8 @@
 
 
 							<li><a href="${contextRoot}/home">Home</a></li>
-							<li class="active">Category</li>
-							<li class="active">${category.name}</li>
+							<li class="active">/Category</li>
+							<li class="active">/${category.name}</li>
 
 
 						</ol>
