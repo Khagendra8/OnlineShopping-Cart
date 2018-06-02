@@ -10,6 +10,8 @@ import javax.persistence.Id;
 
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
 
@@ -21,7 +23,10 @@ public class Product {
 		private String code;
 		private String name;
 		private String brand;
+		
+		@JsonIgnore				//this annotation is used when we don't want to show our data in json format at client side
 		private String description;
+		
 		private int quantity;
 		private int purchases;
 		private int views;
