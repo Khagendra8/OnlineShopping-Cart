@@ -21,7 +21,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	/*static {
+	static {
 		// adding 1st Category
 		Category category = new Category();
 		category.setId(1);
@@ -49,7 +49,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 		categories.add(category);
 
-	}*/
+	}
 
 	@Override
 	public List<Category> list() {
