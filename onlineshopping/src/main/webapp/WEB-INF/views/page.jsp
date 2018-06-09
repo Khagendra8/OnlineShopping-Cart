@@ -23,11 +23,15 @@
 <title>Online Shopping - ${title}</title>
 <script>
 	window.menu = '${title}';
+	window.contextRoot='${contextRoot}'
 </script>
 
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+ <!-- Bootstrop DataTables --> 
+<link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -42,8 +46,8 @@
 
 		<!-- Page Content -->
 		<div class="content">
-		
-		<!-- loading the home content if the user click on home  -->
+
+			<!-- loading the home content if the user click on home  -->
 			<c:if test="${userClickHome == true}">
 				<%@include file="home.jsp"%>
 			</c:if>
@@ -57,9 +61,10 @@
 			<c:if test="${userClickContact== true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-			
+
 			<!--loading only when the user click on Products-->
-			<c:if test="${userClickAllProducts == true or  userClickCategoryProducts == true}">
+			<c:if
+				test="${userClickAllProducts == true or  userClickCategoryProducts == true}">
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 
@@ -69,12 +74,15 @@
 
 		<!-- JavaScript -->
 		<script src="${js}/jquery.js"></script>
-		
+
 		<!-- BootStrap  -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
-		<!-- JQuery Table  -->
+
+		<!-- JQuery DataTable  plugin-->
 		<script src="${js}/jquery.dataTables.js"></script>
+
+		<!--  DataTable BootStrap script-->
+		<script src="${js}/dataTables.bootstrap4.js"></script>
 
 		<!-- self coded javascript code  -->
 		<script src="${js}/myapp.js"></script>
